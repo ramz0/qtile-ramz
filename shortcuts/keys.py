@@ -78,9 +78,15 @@ llaves = [
     Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 2")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 2")),
+
     # Brillo
-    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
+    Key([mod], "i", lazy.spawn("brightnessctl set +5%"), desc="Aumentar brillo"),
+    Key([mod], "k", lazy.spawn("brightnessctl set 5%-"), desc="Disminuir brillo"),
+     
+     
+    # Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
+    # Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
+
 
     # Reproducción de medios
     Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
