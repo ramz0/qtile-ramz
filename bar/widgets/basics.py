@@ -1,6 +1,6 @@
 from libqtile import widget
 from libqtile.lazy import lazy
-from libqtile.widget.backlight import Backlight
+from libqtile.widget.backlight import Backlight # Recordar opitmizar esto.
 
 # Decoraciones
 from coloresWidgets import *

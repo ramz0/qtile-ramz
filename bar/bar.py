@@ -13,11 +13,14 @@ from bar.widgets import widgets
 
 bar_widgets = [
     widgets["launcher"],
+    widgets["groupbox"],
+    widgets["softwarename"],
     widgets["prompt"],
     widgets["systray"],
     widgets["updates"],
     *widgets["volume"],
     *widgets["backlight"],
+    *widgets["battery"],
     *widgets["clock"],
 ]
 
