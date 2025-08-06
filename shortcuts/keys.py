@@ -6,23 +6,22 @@ mod = "mod4"
 terminal = guess_terminal()
 
 llaves = [
-    Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
-    Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
-    Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
-    Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key(["mod1"], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
+    
+    # [Hacer/Desacer] una ventana Flotante.
     Key([mod], "space", lazy.window.toggle_floating()),
-    Key(
-        [mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"
-    ),
-    Key(
-        [mod, "shift"],
-        "l",
-        lazy.layout.shuffle_right(),
-        desc="Move window to the right",
-    ),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
-    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
+  
+    # Cambiamos entre el foco de las ventanas.
+    Key([mod, "shift"], "Left", lazy.layout.left(), desc="Move focus to left"),
+    Key([mod, "shift"], "Right", lazy.layout.right(), desc="Move focus to right"),
+    Key([mod, "shift"], "Down", lazy.layout.down(), desc="Move focus down"),
+    Key([mod, "shift"], "Up", lazy.layout.up(), desc="Move focus up"),
+    
+    # Mover ventanas.
+    Key([mod], "Left", lazy.layout.shuffle_left(), desc="Move window to the left"),
+    Key([mod], "Right", lazy.layout.shuffle_right(), desc="Move window to the right"),
+    Key([mod], "Down", lazy.layout.shuffle_down(), desc="Move window down"),
+    Key([mod], "Up", lazy.layout.shuffle_up(), desc="Move window up"),
+    
     Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
     Key(
         [mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right"
@@ -66,14 +65,10 @@ llaves = [
         lazy.spawn(".config/rofi/bin/powermenu"),
         desc="Spawn a command usung ~Rofi PowerMenu",
     ),
-    #  ~ IDE code.
+
+    #  Abrir VSCode.
     Key([mod], "c", lazy.spawn("code"), desc="Open visual-studio-code"),
-    Key(
-        [mod],
-        "y",
-        lazy.spawn("wezterm start -- lvim", shell=True),
-        desc="Open lunar-vim",
-    ),
+    
     # Volumen
     Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 2")),
@@ -83,15 +78,8 @@ llaves = [
     Key([mod], "i", lazy.spawn("brightnessctl set +5%"), desc="Aumentar brillo"),
     Key([mod], "k", lazy.spawn("brightnessctl set 5%-"), desc="Disminuir brillo"),
      
-     
-    # Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
-    # Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
-
-
     # Reproducción de medios
     Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
     Key([], "XF86AudioNext", lazy.spawn("playerctl next")),
     Key([], "XF86AudioPrev", lazy.spawn("playerctl previous")),
-    # ~ wallpaper
-    Key([mod, "control"], "x", lazy.spawn("python -c 'changeWallpaper()'")),
 ]
