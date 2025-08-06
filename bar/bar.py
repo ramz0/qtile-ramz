@@ -7,28 +7,7 @@ from libqtile.widget.backlight import Backlight
 from libqtile.lazy import lazy
 from coloresWidgets import *
 
-
-# Decoracion de los widgests (bordeado DERECHA E IZQUIERDA).
-
-decoration_left = {
-    "decorations": [
-        widget.decorations.RectDecoration(
-            filled=True,
-            radius=[10, 0, 0, 10],
-            use_widget_background=True,
-        )
-    ],
-}
-
-decoration_rigth = {
-    "decorations": [
-        widget.decorations.RectDecoration(
-            filled=True,
-            radius=[0, 10, 10, 0],
-            use_widget_background=True,
-        )
-    ],
-}
+from bar.visuals.decorations import *
 
 # Creacion de la Barra del sistema.
 bar = [
