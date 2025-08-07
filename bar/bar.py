@@ -1,9 +1,8 @@
 import os
 from libqtile import bar
 from libqtile.config import Screen
-from theme.colors import *
 
-from bar.visuals.decorations import *
+from theme.colors import *
 
 from bar.widgets import widgets
 

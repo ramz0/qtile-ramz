@@ -1,4 +1,5 @@
 from libqtile import widget
+from qtile_extras import widget
 from libqtile.lazy import lazy
 
 from bar.widgets.extensions.battery import BatteryIcon
@@ -7,7 +8,7 @@ from bar.widgets.extensions.groupBox import GroupBox
 
 # Decoraciones
 from theme.colors import *
-from bar.visuals.decorations import *
+from theme.decorations import *
 
 widgets = {
   "softwarename": MinimalistWindowName(
