@@ -1,5 +1,5 @@
 from libqtile.widget import groupbox
-from CaracteristicasWidgets import iconosDeGrupos
+from theme.icons import iconosDeGrupos
 
 class GroupBox(groupbox.GroupBox):
 

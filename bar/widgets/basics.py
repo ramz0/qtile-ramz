@@ -2,7 +2,7 @@ from libqtile import widget
 from libqtile.lazy import lazy
 
 # Decoraciones
-from coloresWidgets import *
+from theme.colors import *
 from bar.visuals.decorations import *
 
 widgets = {
