@@ -1,6 +1,5 @@
 from libqtile import widget
 from libqtile.lazy import lazy
-from libqtile.widget.backlight import Backlight
 
 # Decoraciones
 from coloresWidgets import *
@@ -54,7 +53,7 @@ widgets = {
             background=colorBrillo,
             **decoration_left,
         ),
-        Backlight(
+        widget.Backlight(
             backlight_name="intel_backlight",
             padding=8,
             foreground=colorBarra,

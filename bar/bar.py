@@ -1,10 +1,6 @@
 import os
-from libqtile import bar, widget
-from qtile_extras import widget
+from libqtile import bar
 from libqtile.config import Screen
-from personalWidgets import battery, groupBox, windowName
-from libqtile.widget.backlight import Backlight
-from libqtile.lazy import lazy
 from coloresWidgets import *
 
 from bar.visuals.decorations import *
@@ -13,11 +9,22 @@ from bar.widgets import widgets
 
 bar_widgets = [
     widgets["launcher"],
+    widgets["sep"],
+    widgets["groupbox"],
+    widgets["sep"],
+    widgets["softwarename"],
     widgets["prompt"],
+    widgets["small_spacer"],
     widgets["systray"],
+    widgets["small_spacer"],
     widgets["updates"],
+    widgets["sep"],
     *widgets["volume"],
+    widgets["small_spacer"],
     *widgets["backlight"],
+    widgets["small_spacer"],
+    *widgets["battery"],
+    widgets["small_spacer"],
     *widgets["clock"],
 ]
 
@@ -25,7 +32,7 @@ bar_widgets = [
 bar = [
     Screen(
         wallpaper=os.path.expanduser("~/documents/wallpapers/street.jpg"),
-        # bottom=bar.Bar(
+        # Podemos cambiar a [top, bottom].
         top=bar.Bar(
             bar_widgets,
             21,
