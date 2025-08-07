@@ -1,9 +1,9 @@
 from libqtile import widget
 from libqtile.lazy import lazy
 
-from personalWidgets.battery import BatteryIcon
-from personalWidgets.windowName import MinimalistWindowName
-from personalWidgets.groupBox import GroupBox
+from bar.widgets.extensions.battery import BatteryIcon
+from bar.widgets.extensions.windowName import MinimalistWindowName
+from bar.widgets.extensions.groupBox import GroupBox
 
 # Decoraciones
 from theme.colors import *
