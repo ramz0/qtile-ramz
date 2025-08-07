@@ -3,10 +3,12 @@ from libqtile.config import Match
 
 from bar.bar import bar
 from bar.bar import widget_defaults
-from bar.escritorios import grupos 
+
 from shortcuts.keys import llaves
 from shortcuts.mouse import accionesRaton
-from layouts.layouts import Modlayouts
+
+from settings.escritorios import grupos 
+from settings.layouts import Modlayouts
 
 
 # Cargar configuracion de Comandos de Teclado.
