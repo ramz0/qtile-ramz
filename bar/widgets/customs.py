@@ -6,7 +6,7 @@ from personalWidgets.windowName import MinimalistWindowName
 from personalWidgets.groupBox import GroupBox
 
 # Decoraciones
-from coloresWidgets import *
+from theme.colors import *
 from bar.visuals.decorations import *
 
 widgets = {
