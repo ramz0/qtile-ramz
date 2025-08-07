@@ -36,9 +36,9 @@ bar = [
         top=bar.Bar(
             bar_widgets,
             21,
-            margin=[10, 10, 0, 10],
+            margin=[5, 5, 0, 5],
             background=colorBarra,
-            border_width=3,  # Draw top and bottom borders
+            border_width=4,  # Draw top and bottom borders
             border_color=colorBarra,  # Borders are magenta
         ),
     ),
