@@ -7,7 +7,7 @@ from bar.bar import widget_defaults
 from shortcuts.keys import llaves
 from shortcuts.mouse import accionesRaton
 
-from settings.escritorios import grupos 
+from settings.groups import grupos 
 from settings.layouts import Modlayouts
 
 
