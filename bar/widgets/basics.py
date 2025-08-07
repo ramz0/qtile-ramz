@@ -1,9 +1,10 @@
 from libqtile import widget
+from qtile_extras import widget
 from libqtile.lazy import lazy
 
 # Decoraciones
 from theme.colors import *
-from bar.visuals.decorations import *
+from theme.decorations import *
 
 widgets = {
     "launcher": widget.TextBox(
@@ -57,10 +58,6 @@ widgets = {
             backlight_name="intel_backlight",
             padding=8,
             foreground=colorBarra,
-            background=colorBrillo,
-            **decoration_rigth,
-        ),
-        widget.TextBox(
             background=colorBrillo,
             **decoration_rigth,
         ),
