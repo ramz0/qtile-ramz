@@ -4,7 +4,7 @@ from libqtile.config import Match
 from bar.bar import bar
 from bar.bar import widget_defaults
 
-from shortcuts.keys import llaves
+from shortcuts import keys
 from shortcuts.mouse import accionesRaton
 
 from settings.groups import grupos 
@@ -12,7 +12,7 @@ from settings.layouts import Modlayouts
 
 
 # Cargar configuracion de Comandos de Teclado.
-keys = llaves
+keys = keys
 
 # Cargar grupos de la barra del sistema.
 groups = grupos
