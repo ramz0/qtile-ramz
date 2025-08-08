@@ -1,6 +1,6 @@
 from qtile_extras.widget import decorations
 
-decoration_round = {
+decor_widget_round = {
     "decorations": [
         decorations.RectDecoration(
             filled=True,
@@ -10,7 +10,7 @@ decoration_round = {
     ],
 }
 
-decoration_left = {
+decor_left_edge = {
     "decorations": [
         decorations.RectDecoration(
             filled=True,
@@ -20,7 +20,7 @@ decoration_left = {
     ],
 }
 
-decoration_rigth = {
+decor_right_edge = {
     "decorations": [
         decorations.RectDecoration(
             filled=True,
@@ -30,7 +30,7 @@ decoration_rigth = {
     ],
 }
 
-decoration_rigth2 = {
+decor_right_soft = {
     "decorations": [
         decorations.RectDecoration(
             filled=True,
