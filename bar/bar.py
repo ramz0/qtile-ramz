@@ -9,7 +9,7 @@ from bar.widgets import widgets
 bar_widgets = [
     widgets["launcher"],
     widgets["sep"],
-    widgets["groupbox"],
+    *widgets["groupbox"],
     widgets["sep"],
     widgets["softwarename"],
     widgets["prompt"],
