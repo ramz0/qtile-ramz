@@ -28,7 +28,7 @@ widgets = {
       padding=6,
       background=colorBateria,
       foreground=colorBarra,
-      **decoration_left,
+      **decor_left_edge,
     ),
     widget.Battery(
       charge_char = '',
@@ -38,7 +38,7 @@ widgets = {
       padding=8,
       background=colorBateria,
       foreground=colorBarra,
-      **decoration_rigth,
+      **decor_right_edge,
     ),
   ]
 }

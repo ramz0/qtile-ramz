@@ -13,7 +13,7 @@ widgets = {
         foreground=colorBarra,
         padding=23,
         fontsize=19,
-        **decoration_round,
+        **decor_widget_round,
         mouse_callbacks={
             "Button1": lazy.spawn(
                 'rofi -show drun -icon-theme "Papirus" -show-icons'
@@ -36,13 +36,13 @@ widgets = {
             padding=8,
             foreground=colorBarra,
             background=colorVolumen,
-            **decoration_left,
+            **decor_left_edge,
         ),
         widget.Volume(
             foreground=colorBarra,
             background=colorVolumen,
             padding=8,
-            **decoration_rigth,
+            **decor_right_edge,
         ),
     ],
     "backlight":[
@@ -52,14 +52,14 @@ widgets = {
             padding=8,
             foreground=colorBarra,
             background=colorBrillo,
-            **decoration_left,
+            **decor_left_edge,
         ),
         widget.Backlight(
             backlight_name="intel_backlight",
             padding=8,
             foreground=colorBarra,
             background=colorBrillo,
-            **decoration_rigth,
+            **decor_right_edge,
         ),
     ],
     "clock": [
@@ -69,7 +69,7 @@ widgets = {
             padding=6,
             background=colorFechaYHora,
             foreground=colorBarra,
-            **decoration_left,
+            **decor_left_edge,
         ),
         widget.Clock(
             format="%I:%M %p",
@@ -89,7 +89,7 @@ widgets = {
             background=colorFechaYHora,
             foreground=colorBarra,
             padding=8,
-            **decoration_rigth2,
+            **decor_right_soft,
         ),
     ]
 }
