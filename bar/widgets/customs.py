@@ -14,12 +14,25 @@ widgets = {
   "softwarename": MinimalistWindowName(
     foreground = colorDeTextos,
   ),
-  "groupbox": GroupBox(
-    highlight_method="text",
-    active=colorDeGruposActivos,
-    this_current_screen_border=colorDelGrupoActual,
-    fontsize=15,
-  ),
+  "groupbox": [
+    widget.TextBox(
+      padding=2,
+      background=colorBarraGrupos,
+      **decor_left_soft,
+    ),
+    GroupBox(
+      highlight_method="text",
+      active=colorDeGruposActivos,
+      this_current_screen_border=colorDelGrupoActual,
+      fontsize=15,
+      background=colorBarraGrupos,
+    ),
+    widget.TextBox(
+      padding=2,
+      background=colorBarraGrupos,
+      **decor_right_soft,
+    ),
+  ],
   "battery": [
     BatteryIcon(
       update_interval=30,

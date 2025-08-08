@@ -30,6 +30,16 @@ decor_right_edge = {
     ],
 }
 
+decor_left_soft = {
+    "decorations": [
+        decorations.RectDecoration(
+            filled=True,
+            radius=[10, 0, 0, 10],
+            use_widget_background=True,
+        )
+    ],
+}
+
 decor_right_soft = {
     "decorations": [
         decorations.RectDecoration(
