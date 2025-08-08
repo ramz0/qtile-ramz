@@ -5,7 +5,7 @@ from libqtile.utils import guess_terminal
 mod = "mod4"
 terminal = guess_terminal()
 
-llaves = [
+keys = [
     
     # [Hacer/Desacer] una ventana Flotante.
     Key([mod], "space", lazy.window.toggle_floating()),
