@@ -1,4 +1,8 @@
-from .keys import keys as general_keys
-from .keys_groups import keys as group_keys
+from .keys_general import keys as general
+from .keys_groups import keys as group
+from .keys_rofi import keys as rofi
+from .keys_apps import keys as apps
+from .keys_media import keys as media
 
-keys = general_keys + group_keys
+
+keys = general + group + rofi + apps + media
