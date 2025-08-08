@@ -2,7 +2,7 @@ from libqtile.config import Key
 from libqtile.lazy import lazy
 
 from settings.groups import grupos  
-from shortcuts.keys import mod      
+from shortcuts.config import mod
 
 keys = []
 
