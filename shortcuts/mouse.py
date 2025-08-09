@@ -1,7 +1,7 @@
 from libqtile.config import Click, Drag
 from libqtile.lazy import lazy
 
-from shortcuts.keys import mod
+from shortcuts.config import mod
 
 
 accionesRaton = [
