@@ -16,6 +16,7 @@ widgets = {
   ),
   "groupbox": [
     widget.TextBox(
+      fontsize=18,
       padding=2,
       background=colorBarraGrupos,
       **decor_left_soft,
@@ -28,6 +29,7 @@ widgets = {
       background=colorBarraGrupos,
     ),
     widget.TextBox(
+      fontsize=18,
       padding=2,
       background=colorBarraGrupos,
       **decor_right_soft,

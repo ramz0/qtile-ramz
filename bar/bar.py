@@ -8,8 +8,9 @@ from bar.widgets import widgets
 
 bar_widgets = [
     widgets["launcher"],
-    widgets["sep"],
+    widgets["big_spacer"],
     *widgets["groupbox"],
+    widgets["big_spacer"],
     widgets["sep"],
     widgets["softwarename"],
     widgets["prompt"],

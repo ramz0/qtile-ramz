@@ -53,7 +53,7 @@ listaDeColoresGrupos = [
   colores["blue"], 
   colores["blue"], 
 ]
-colorBarraGrupos = colores["mantle"]
+colorBarraGrupos = colores["crust"]
 colorDelGrupoActivo = colorMoradoIntenso
 colorDeGruposActivos = listaDeColoresGrupos
 colorDelGrupoActual = colores["yellow"]
