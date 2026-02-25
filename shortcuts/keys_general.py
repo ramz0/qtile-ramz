@@ -26,7 +26,7 @@ keys = [
     Key([mod], "Tab", lazy.next_layout()),
 
     Key([mod], "w", lazy.window.kill()),
-    Key([mod, "control"], "r", lazy.reload_config()),
+    Key([mod, "control"], "r", lazy.restart()),
     Key([mod, "control"], "q", lazy.shutdown()),
     Key([mod], "Return", lazy.spawn(terminal)),
 ]
