@@ -31,7 +31,7 @@ bar_widgets = [
 # Creacion de la Barra del sistema.
 bar = [
     Screen(
-        wallpaper=os.path.expanduser("~/Documents/wallpapers/street.jpg"),
+        wallpaper=os.path.expanduser("~/documents/wallpapers/street.jpg"),
         # Podemos cambiar a [top, bottom].
         top=bar.Bar(
             bar_widgets,

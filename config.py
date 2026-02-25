@@ -1,3 +1,12 @@
+import sys
+
+# Forzar instancias frescas de widgets en cada reload_config()
+# Sin esto, Python reutiliza los mismos objetos de widgets cacheados
+# causando que la barra antigua y la nueva compartan instancias.
+_mods_bar = [m for m in list(sys.modules) if m.startswith("bar") or m.startswith("theme")]
+for _m in _mods_bar:
+    del sys.modules[_m]
+
 from libqtile import layout
 from libqtile.config import Match
 
