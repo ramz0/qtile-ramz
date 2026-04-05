@@ -48,3 +48,15 @@ def auto_monitor(event):
         ])
 
     qtile.reconfigure_screens()
+
+
+@hook.subscribe.startup
+def set_initial_groups():
+    """Configura los grupos iniciales al iniciar Qtile."""
+    if qtile is None:
+        return
+    # Screen 0 al grupo 1, Screen 1 al grupo 1b
+    if len(qtile.screens) >= 1:
+        qtile.groups_map["1"].toscreen(0)
+    if len(qtile.screens) >= 2:
+        qtile.groups_map["1b"].toscreen(1)
