@@ -1,5 +1,5 @@
 import os
-from libqtile import bar, widget
+from libqtile import bar
 from libqtile.config import Screen
 
 from theme.colors import *
@@ -26,20 +26,17 @@ bar_widgets = [
     widgets["small_spacer"],
     *widgets["battery"],
     widgets["small_spacer"],
-    *widgets["clock"],
-],
+    *widgets["clock"]
+]
 
 bar_widgets_secondary = [
     widgets["small_spacer"],
     *widgets["groupbox"],
-    widgets["big_spacer"], widgets["small_spacer"],
-    *widgets["clock"],
     widgets["sep"],
     widgets["softwarename"],
     widgets["sep"],
     *widgets["clock"],
-    widgets["small_spacer"],
-],
+]
 
 # Creacion de la Barra del sistema.
 bar = [
