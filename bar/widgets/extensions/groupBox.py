@@ -25,9 +25,12 @@ class GroupBox(groupbox.GroupBox):
                 text_color = self.inactive
 
             if g.screen:
-                if self.highlight_method == "text": 
+                if self.highlight_method == "text":
                     border = None
-                    text_color = self.this_current_screen_border
+                    if self.bar.screen.group.name == g.name:
+                        text_color = self.this_current_screen_border
+                    else:
+                        text_color = self.other_current_screen_border
                     g.label = '󰮯'
                 else:
                     
