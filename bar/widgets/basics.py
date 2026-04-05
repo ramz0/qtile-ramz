@@ -21,7 +21,10 @@ widgets = {
         },
     ),
     "prompt": widget.Prompt(),
-    "systray": widget.Systray(icon_size=17),
+    "systray": widget.Systray(
+      icon_size=16, 
+    ),
+    "statusnotifier": widget.StatusNotifier(icon_size=17, padding=4),
     "updates": widget.CheckUpdates(
         display_format="󰻌",
         no_update_string="󰕥",
