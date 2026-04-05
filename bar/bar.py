@@ -31,12 +31,12 @@ bar_widgets = [
 # Creacion de la Barra del sistema.
 bar = [
     Screen(
-        wallpaper=os.path.expanduser("~/documents/wallpapers/street.jpg"),
+        wallpaper=os.path.expanduser("~/documents/wallpapers/starwars.png"),
         # Podemos cambiar a [top, bottom].
         top=bar.Bar(
             bar_widgets,
-            21,
-            margin=[5, 5, 0, 5],
+            20,
+            margin=[3, 3, 0, 3],
             background=colorBarra,
             border_width=4,  # Draw top and bottom borders
             border_color=colorBarra,  # Borders are magenta
@@ -48,7 +48,7 @@ bar = [
 widget_defaults = dict(
     font="sans",
     fontsize=12,
-    padding=3,
+    padding=4,
 )
 
 widget_defaults = widget_defaults.copy()
