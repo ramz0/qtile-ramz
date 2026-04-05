@@ -31,7 +31,7 @@ bar_widgets = [
 
 bar_widgets_secondary = [
     widgets["small_spacer"],
-    *widgets["groupbox"],
+    *widgets["groupbox_monitor"],
     widgets["sep"],
     widgets["softwarename"],
     widgets["sep"],
