@@ -10,6 +10,8 @@ for _m in _mods_bar:
 from libqtile import layout
 from libqtile.config import Match
 
+from theme.colors import border_focus
+
 from bar.bar import bar
 from bar.bar import widget_defaults
 
@@ -44,7 +46,7 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus="#ab9df2",
+    border_focus=border_focus,
     float_rules=[
         *layout.Floating.default_float_rules,
         Match(wm_class="confirmreset"),  # gitk
