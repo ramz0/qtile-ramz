@@ -96,5 +96,21 @@ widgets = {
             padding=8,
             **decor_right_soft,
         ),
-    ]
+    ],
+    "cpu_state":[
+        widget.TextBox(
+            text="",
+            fontsize=14,
+            padding=8,
+            foreground=colorBarra,
+            background=colorCPU,
+            **decor_left_edge,
+        ),
+        widget.CPU(
+          padding=10,
+          foreground=colorBarra,
+          background=colorCPU,
+          **decor_right_edge
+        ),
+    ],
 }

@@ -35,6 +35,8 @@ bar_widgets_secondary = [
     widgets["sep"],
     widgets["softwarename"],
     widgets["sep"],
+    *widgets["cpu_state"],
+    widgets["big_spacer"],
     *widgets["clock"],
 ]
 
