@@ -3,13 +3,15 @@ from libqtile import bar
 from libqtile.config import Screen
 
 from theme.colors import *
+from theme.decorations import *
 
 from bar.widgets import widgets
 
 bar_widgets = [
     widgets["launcher"],
-    widgets["sep"],
+    widgets["big_spacer"],
     *widgets["groupbox"],
+    widgets["big_spacer"],
     widgets["sep"],
     widgets["softwarename"],
     widgets["prompt"],
@@ -24,21 +26,41 @@ bar_widgets = [
     widgets["small_spacer"],
     *widgets["battery"],
     widgets["small_spacer"],
+    *widgets["clock"]
+]
+
+bar_widgets_secondary = [
+    widgets["small_spacer"],
+    *widgets["groupbox"],
+    widgets["sep"],
+    widgets["softwarename"],
+    widgets["sep"],
+    *widgets["cpu_state"],
+    widgets["big_spacer"],
     *widgets["clock"],
 ]
 
 # Creacion de la Barra del sistema.
 bar = [
     Screen(
-        wallpaper=os.path.expanduser("~/documents/wallpapers/street.jpg"),
-        # Podemos cambiar a [top, bottom].
+        wallpaper=os.path.expanduser("~/documents/wallpapers/starwars.png"),
         top=bar.Bar(
             bar_widgets,
-            21,
-            margin=[5, 5, 0, 5],
+            20,
+            margin=[3, 3, 0, 3],
             background=colorBarra,
-            border_width=4,  # Draw top and bottom borders
-            border_color=colorBarra,  # Borders are magenta
+            border_width=4,
+            border_color=colorBarra,
+        ),
+    ),
+    Screen(
+        top=bar.Bar(
+            bar_widgets_secondary,
+            20,
+            margin=[3, 3, 0, 3],
+            background=colorBarra,
+            border_width=4,
+            border_color=colorBarra,
         ),
     ),
 ]
@@ -47,7 +69,7 @@ bar = [
 widget_defaults = dict(
     font="sans",
     fontsize=12,
-    padding=3,
+    padding=4,
 )
 
 widget_defaults = widget_defaults.copy()

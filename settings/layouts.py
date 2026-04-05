@@ -1,8 +1,10 @@
 from libqtile import layout
 
+from theme.colors import border_focus
+
 Modlayouts = [
     layout.MonadTall(
-        border_focus="#ab9df2",
+        border_focus=border_focus,
         single_border_width=0,
         margin=8,
         single_margin=8,

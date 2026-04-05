@@ -1,0 +1,27 @@
+{
+    "name": "Tokyo Night Moon",
+    "border_focus": "#fca7ea",
+    "colors": {
+        "red": "#ff757f",
+        "orange": "#ff966c",
+        "yellow": "#ffc777",
+        "green": "#c3e88d",
+        "cyan": "#86e1fc",
+        "blue": "#82aaff",
+        "purple": "#fca7ea",
+        "pink": "#fca7ea",
+        "magenta": "#c099ff",
+        "text": "#c8d3f5",
+        "subtext1": "#a9b1d6",
+        "subtext0": "#828bb8",
+        "overlay2": "#636da6",
+        "overlay1": "#545c7e",
+        "overlay0": "#414868",
+        "surface2": "#3b4261",
+        "surface1": "#2f334d",
+        "surface0": "#292e42",
+        "base": "#222436",
+        "mantle": "#1e2030",
+        "crust": "#1b1d2b"
+    }
+}

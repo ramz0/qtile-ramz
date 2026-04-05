@@ -21,7 +21,12 @@ widgets = {
         },
     ),
     "prompt": widget.Prompt(),
-    "systray": widget.Systray(icon_size=17),
+    "systray": widget.Systray(
+      icon_size=17, 
+      foreground=colorBarra,
+      background=colorBarra
+    ),
+    "statusnotifier": widget.StatusNotifier(icon_size=17, padding=4),
     "updates": widget.CheckUpdates(
         display_format="󰻌",
         no_update_string="󰕥",
@@ -91,5 +96,21 @@ widgets = {
             padding=8,
             **decor_right_soft,
         ),
-    ]
+    ],
+    "cpu_state":[
+        widget.TextBox(
+            text="",
+            fontsize=14,
+            padding=8,
+            foreground=colorBarra,
+            background=colorCPU,
+            **decor_left_edge,
+        ),
+        widget.CPU(
+          padding=10,
+          foreground=colorBarra,
+          background=colorCPU,
+          **decor_right_edge
+        ),
+    ],
 }

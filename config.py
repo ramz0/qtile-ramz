@@ -1,5 +1,17 @@
+import sys
+import hooks  # noqa: F401 — registra el hook screen_change para detección de monitores
+
+# Forzar instancias frescas de widgets en cada reload_config()
+# Sin esto, Python reutiliza los mismos objetos de widgets cacheados
+# causando que la barra antigua y la nueva compartan instancias.
+_mods_bar = [m for m in list(sys.modules) if m.startswith("bar") or m.startswith("theme")]
+for _m in _mods_bar:
+    del sys.modules[_m]
+
 from libqtile import layout
 from libqtile.config import Match
+
+from theme.colors import border_focus
 
 from bar.bar import bar
 from bar.bar import widget_defaults
@@ -35,7 +47,7 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus="#ab9df2",
+    border_focus=border_focus,
     float_rules=[
         *layout.Floating.default_float_rules,
         Match(wm_class="confirmreset"),  # gitk

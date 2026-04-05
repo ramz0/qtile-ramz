@@ -1,0 +1,27 @@
+{
+    "name": "Tokyo Night Day",
+    "border_focus": "#9854f1",
+    "colors": {
+        "red": "#f52a65",
+        "orange": "#b15c00",
+        "yellow": "#8c6c3e",
+        "green": "#587539",
+        "cyan": "#007197",
+        "blue": "#2e7de9",
+        "purple": "#9854f1",
+        "pink": "#9854f1",
+        "magenta": "#9854f1",
+        "text": "#3760bf",
+        "subtext1": "#6172b0",
+        "subtext0": "#848cb5",
+        "overlay2": "#68709a",
+        "overlay1": "#8990b3",
+        "overlay0": "#a1a6c5",
+        "surface2": "#a8aecb",
+        "surface1": "#c4c8da",
+        "surface0": "#d0d5e3",
+        "base": "#e1e2e7",
+        "mantle": "#d0d5e3",
+        "crust": "#b4b5b9"
+    }
+}
