@@ -25,8 +25,10 @@ widgets = {
       highlight_method="text",
       active=colorDeGruposActivos,
       this_current_screen_border=colorDelGrupoActual,
+      other_current_screen_border=colorDelGrupoOtroMonitor,
       fontsize=15,
       background=colorBarraGrupos,
+      visible_groups=["1", "2", "3", "4", "5", "6"],
     ),
     widget.TextBox(
       fontsize=18,
@@ -34,6 +36,30 @@ widgets = {
       background=colorBarraGrupos,
       **decor_right_soft,
     ),
+  ],
+
+  "groubox_monitor": [
+     widget.TextBox(
+        fontsize=18,
+        padding=2,
+        background=colorBarraGrupos,
+        **decor_left_soft,
+    ),
+    GroupBox(
+        highlight_method="text",
+        active=colorDeGruposActivos,
+        this_current_screen_border=colorDelGrupoActual,
+        other_current_screen_border=colorDelGrupoOtroMonitor,
+        fontsize=15,
+        background=colorBarraGrupos,
+        visible_groups=["1b", "2b", "3b", "4b", "5b", "6b"],
+    ),
+    widget.TextBox(
+        fontsize=18,
+        padding=2,
+        background=colorBarraGrupos,
+        **decor_right_soft,
+    )
   ],
   "battery": [
     BatteryIcon(

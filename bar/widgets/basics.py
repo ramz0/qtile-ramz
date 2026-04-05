@@ -22,7 +22,9 @@ widgets = {
     ),
     "prompt": widget.Prompt(),
     "systray": widget.Systray(
-      icon_size=16, 
+      icon_size=17, 
+      foreground=colorBarra,
+      background=colorBarra
     ),
     "statusnotifier": widget.StatusNotifier(icon_size=17, padding=4),
     "updates": widget.CheckUpdates(
