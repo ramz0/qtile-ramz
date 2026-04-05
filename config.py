@@ -1,4 +1,5 @@
 import sys
+import hooks  # noqa: F401 — registra el hook screen_change para detección de monitores
 
 # Forzar instancias frescas de widgets en cada reload_config()
 # Sin esto, Python reutiliza los mismos objetos de widgets cacheados
