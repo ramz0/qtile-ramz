@@ -54,6 +54,7 @@ bar = [
         ),
     ),
     Screen(
+        wallpaper=os.path.expanduser("~/documents/wallpapers/starwars_m.png"),
         top=bar.Bar(
             bar_widgets_secondary,
             20,
