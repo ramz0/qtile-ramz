@@ -1,6 +1,8 @@
 # qtile-ramz
 
-<img src="docs/images/desktop.gif" width="600" alt="Demo de Qtile">
+<p align="center">
+<img src="docs/images/desktop.gif" width="600" style="border-radius: 15px;" alt="Demo de Qtile">
+</p>
 
 Configuración personalizada de Qtile con Qtile Extras.
 
@@ -309,7 +311,8 @@ La tecla **Windows** de tu teclado (también llamada **Super** en Linux/Mac).
 </details>
 
 <details>
-<summary><b>📁 Grupos de Trabajo</b></summary>
+<details>
+<summary><b>Grupos de Trabajo</b></summary>
 
 | Atajo | Acción |
 |-------|--------|
@@ -523,6 +526,10 @@ cp -r qtile/ ~/.config/
 | Paquete | Descripción |
 |---------|-------------|
 | [RofiCollection](https://github.com/ramz0/RofiCollection.git) | Scripts para volumen, powermenu, screenshot, wifi, calendario, emoji |
+
+<img src="docs/images/rofi.png" width="400" alt="Rofi scripts">
+
+*Ver más scripts en el [repositorio de RofiCollection](https://github.com/ramz0/RofiCollection)*
 
 Clonar el repositorio:
 
