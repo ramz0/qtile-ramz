@@ -287,8 +287,7 @@ La tecla **Windows** de tu teclado (también llamada **Super** en Linux/Mac).
 
 ## Catálogo de Atajos
 
-<details>
-<summary><b>�_general - Navegación y Control</b></summary>
+### �_general - Navegación y Control
 
 | Atajo | Acción |
 |-------|--------|
@@ -308,11 +307,7 @@ La tecla **Windows** de tu teclado (también llamada **Super** en Linux/Mac).
 | `Mod + Shift + ←/→/↑/↓` | Mover ventana |
 | `Mod + Ctrl + ←/→/↑/↓` | Redimensionar ventana |
 
-</details>
-
-<details>
-<details>
-<summary><b>Grupos de Trabajo</b></summary>
+### Grupos de Trabajo
 
 | Atajo | Acción |
 |-------|--------|
@@ -321,10 +316,7 @@ La tecla **Windows** de tu teclado (también llamada **Super** en Linux/Mac).
 
 Soporta workspaces pareados para múltiples monitores (ej: 1 y 1b, 2 y 2b, etc.). Al presionar nuevamente se vuelve al grupo anterior.
 
-</details>
-
-<details>
-<summary><b>🖥️ Monitores</b></summary>
+### 🖥️ Monitores
 
 | Atajo | Acción |
 |-------|--------|
@@ -332,10 +324,7 @@ Soporta workspaces pareados para múltiples monitores (ej: 1 y 1b, 2 y 2b, etc.)
 | `Mod + b` | Mostrar/ocultar barra de laptop |
 | `Mod + Shift + b` | Mostrar/ocultar barra del monitor |
 
-</details>
-
-<details>
-<summary><b>📱 multimedia (Volumen y Brillo)</b></summary>
+### 📱 multimedia (Volumen y Brillo)
 
 ##### Volumen
 | Atajo | Acción |
@@ -357,10 +346,7 @@ Soporta workspaces pareados para múltiples monitores (ej: 1 y 1b, 2 y 2b, etc.)
 | `XF86AudioNext` | Siguiente pista |
 | `XF86AudioPrev` | Pista anterior |
 
-</details>
-
-<details>
-<summary><b>🚀 Aplicaciones</b></summary>
+### 🚀 Aplicaciones
 
 | Atajo | Acción |
 |-------|--------|
@@ -373,18 +359,13 @@ Soporta workspaces pareados para múltiples monitores (ej: 1 y 1b, 2 y 2b, etc.)
 | `Mod + Ctrl + Shift + s` | Captura de pantalla |
 | `Mod + c` | Visual Studio Code |
 
-</details>
-
-<details>
-<summary><b>🖱️ Ratón</b></summary>
+### 🖱️ Ratón
 
 | Atajo | Acción |
 |-------|--------|
 | `Mod + Click 1` | Arrastrar ventana (posición) |
 | `Mod + Click 3` | Arrastrar ventana (tamaño) |
 | `Mod + Click 2` | Traer ventana al frente |
-
-</details>
 
 ## Paleta de Colores
 
@@ -585,4 +566,3 @@ Mod + Ctrl + r
 - [Wiki oficial de Qtile](https://docs.qtile.org/)
 - [Qtile Extras](https://qtile-extras.readthedocs.io/)
 - [Rofi scripts collection](https://github.com/adi1090x/rofi)
-- [Awesome Qtile](https://github.com/x4121/awesome-qtile)
