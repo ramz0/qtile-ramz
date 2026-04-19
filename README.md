@@ -216,6 +216,10 @@ widgets = {
 }
 ```
 
+<img src="docs/images/ejemplo-armar-widget.png" width="350" alt="Ejemplo cómo crear widget en customs.py">
+
+*El mismo flujo aplica para basics.py*
+
 3. **Agregar a bar/bar.py**:
 
 ```python
@@ -229,6 +233,10 @@ bar_widgets = [
     *widgets["clock"]
 ]
 ```
+
+<img src="docs/images/ejemplo-widget-bar.png" width="350" alt="Ejemplo de barra con widgets">
+
+*Barra principal (bar_widgets). Mismo flujo para barra secundaria (bar_widgets_secondary)*
 
 **¿Por qué el asterisco `*`?**
 - `*widgets["battery"]` = Es una **lista** de múltiples widgets (icono + texto)
