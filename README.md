@@ -216,7 +216,9 @@ widgets = {
 }
 ```
 
-<img src="docs/images/ejemplo-armar-widget.png" width="350" alt="Ejemplo cómo crear widget en customs.py">
+<p align="center">
+<img src="docs/images/ejemplo-armar-widget.png" width="600" alt="Ejemplo cómo crear widget en customs.py">
+</p>
 
 *El mismo flujo aplica para basics.py*
 
@@ -234,7 +236,9 @@ bar_widgets = [
 ]
 ```
 
-<img src="docs/images/ejemplo-widget-bar.png" width="350" alt="Ejemplo de barra con widgets">
+<p align="center">
+<img src="docs/images/ejemplo-widget-bar.png" width="600" alt="Ejemplo de barra con widgets">
+</p>
 
 *Barra principal (bar_widgets). Mismo flujo para barra secundaria (bar_widgets_secondary)*
 
