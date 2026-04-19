@@ -5,9 +5,9 @@ from shortcuts.config import mod
 
 keys = [
     # Volumen
-    Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 2")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 2")),
+    Key([], "XF86AudioMute", lazy.spawn(".config/rofi/bin/volume-bar toggle")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn(".config/rofi/bin/volume-bar down")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn(".config/rofi/bin/volume-bar up")),
 
     # Brillo
     Key([mod], "i", lazy.spawn("brightnessctl set +5%")),
