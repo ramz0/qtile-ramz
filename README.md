@@ -36,6 +36,141 @@ qtile/
         └── extensions/    # Widgets personalizados (GroupBox, WindowName, Battery)
 ```
 
+## Cómo Agregar Widgets
+
+Esta configuración sigue un flujo modular para agregar widgets a la barra. El proceso tiene 3 niveles:
+
+### Flujo de Agregar Widgets
+
+```
+1. Documentación → 2. basics/blocks/customs.py → 3. bar/bar.py
+```
+
+### Niveles de Widgets
+
+| Nivel | Archivo | Descripción | Cuándo usarlo |
+|-------|---------|-------------|---------------|
+| **Básico** | `bar/widgets/basics.py` | Widgets simples de libqtile/qtile_extras | Para widgets sin modificar |
+| **Blocks** | `bar/widgets/blocks.py` | Espaciadores y separadores | Para espacio entre widgets |
+| **Custom** | `bar/widgets/customs.py` | Widgets personalizados | Para widgets con modificaciones o extensiones |
+
+### Paso 1: Elegir widget de la documentación
+
+- [Qtile Widgets](https://docs.qtile.org/en/stable/manual/ref/widgets.html) - Widgets oficiales
+- [Qtile Extras](https://qtile-extras.readthedocs.io/) - Widgets adicionales con más funciones
+
+### Paso 2: Agregar al archivo correspondiente
+
+#### Opción A: Widget básico (basics.py)
+
+```python
+# Importar
+from libqtile import widget
+from qtile_extras import widget
+
+# Agregar al diccionario
+widgets = {
+    "nombre_widget": widget.NombreDelWidget(
+        # parámetros...
+    ),
+}
+```
+
+#### Opción B: Bloque/espaciador (blocks.py)
+
+```python
+blocks = {
+    "mi_spacer": widget.Spacer(length=10),
+    "mi_sep": widget.Sep(padding=5),
+}
+```
+
+#### Opción C: Widget personalizado (customs.py)
+
+```python
+# Importar extensión personalizada
+from bar.widgets.extensions.mi_widget import MiWidget
+
+widgets = {
+    "mi_widget": MiWidget(
+        # parámetros...
+    ),
+}
+```
+
+### Paso 3: Decoraciones (opcional)
+
+Los widgets pueden tener bordes redondeados usando `theme/decorations.py`:
+
+```python
+# Importar decoraciones
+from theme.colors import *
+from theme.decorations import *
+
+# Aplicar a un widget
+widget.MiWidget(
+    background=colorMiColor,
+    foreground=colorBarra,
+    **decor_left_edge,  # Borde redondeado izquierda
+),
+```
+
+Decoraciones disponibles:
+- `decor_widget_round` - Completamente redondeado
+- `decor_left_edge` - Redondeado solo izquierda
+- `decor_right_edge` - Redondeado solo derecha
+- `decor_left_soft` - Redondeado suave izquierda
+- `decor_right_soft` - Redondeado suave derecha
+
+### Paso 4: Agregar a la barra
+
+En `bar/bar.py`, agrega el widget a la lista:
+
+```python
+bar_widgets = [
+    widgets["launcher"],
+    widgets["mi_nuevo_widget"],  # ← Agregar aquí
+    widgets["clock"],
+]
+```
+
+Si es una lista de widgets (múltiples partes):
+
+```python
+bar_widgets = [
+    *widgets["mi_widget_compuesto"],  # ← Con asterisco para listas
+    widgets["clock"],
+]
+```
+
+### Ejemplo Completo: Agregar un widget de temperatura
+
+1. **Buscar en docs**: [Qtile Extras ThermalSensor](https://qtile-extras.readthedocs.io/)
+
+2. **Agregar a basics.py**:
+```python
+"temperature": [
+    widget.TextBox(
+        text="🌡️",
+        fontsize=14,
+        background=colorCPU,
+        **decor_left_edge,
+    ),
+    widget.ThermalSensor(
+        background=colorCPU,
+        foreground=colorBarra,
+        **decor_right_edge,
+    ),
+],
+```
+
+3. **Agregar a bar.py**:
+```python
+widgets["temperature"],
+```
+
+4. **Reiniciar Qtile**: `Mod + Ctrl + r`
+
 ## La Tecla Mod
 
 <img src="docs/images/key-windows.png" width="40" alt="Tecla Windows"> = Mod
