@@ -1,16 +1,8 @@
 # qtile-ramz
 
-Configuración personalizada de Qtile con Qtile Extras.
-
-## Ejemplo de Uso
-
 <img src="docs/images/desktop.gif" width="600" alt="Demo de Qtile">
 
-## La Tecla Mod
-
-<img src="docs/images/key-windows.png" width="40" alt="Tecla Windows"> = Mod
-
-La tecla **Windows** de tu teclado (también llamada **Super** en Linux/Mac).
+Configuración personalizada de Qtile con Qtile Extras.
 
 ## Estructura del Proyecto
 
@@ -43,6 +35,12 @@ qtile/
         ├── blocks.py      # Espaciadores y separadores
         └── extensions/    # Widgets personalizados (GroupBox, WindowName, Battery)
 ```
+
+## La Tecla Mod
+
+<img src="docs/images/key-windows.png" width="40" alt="Tecla Windows"> = Mod
+
+La tecla **Windows** de tu teclado (también llamada **Super** en Linux/Mac).
 
 ## Catálogo de Atajos
 
