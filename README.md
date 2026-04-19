@@ -2,6 +2,16 @@
 
 Configuración personalizada de Qtile con Qtile Extras.
 
+## Ejemplo de Uso
+
+<img src="docs/images/desktop.gif" width="600" alt="Demo de Qtile">
+
+## La Tecla Mod
+
+<img src="docs/images/key-windows.png" width="40" alt="Tecla Windows"> = Mod
+
+La tecla **Windows** de tu teclado (también llamada **Super** en Linux/Mac).
+
 ## Estructura del Proyecto
 
 ```
@@ -257,8 +267,8 @@ yay -S ttf-jetbrains-mono-nerd ttf-fira-code-nerd ttf-hack ttf-cascadia-code
 # Arch Linux (core)
 sudo pacman -S qtile python-xkbgroup rofi picom pamixer brightnessctl playerctl papirus-icon-theme ttf-jetbrains-mono
 
-# O desde AUR (más actualizado)
-yay -S qtile-git qtile-extras-git
+# AUR (más actualizado)
+yay -S qtile-git qtile-extras-git ttf-jetbrains-mono-nerd
 ```
 
 ### 2. Copiar configuración
@@ -269,9 +279,19 @@ cp -r qtile/ ~/.config/
 
 ### 3. Configuración adicional
 
-#### Rofi scripts
+#### Rofi Scripts
 
-Los scripts de rofi deben estar en `~/.config/rofi/bin/`. Asegúrate de que existan:
+| Paquete | Descripción |
+|---------|-------------|
+| [RofiCollection](https://github.com/ramz0/RofiCollection.git) | Scripts para volumen, powermenu, screenshot, wifi, calendario, emoji |
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/ramz0/RofiCollection.git ~/.config/rofi
+```
+
+Los scripts necesarios están en `~/.config/rofi/bin/`:
 - `volume-bar` - Control de volumen con OSD
 - `powermenu` - Menú de apagado
 - `screenshot` - Captura de pantalla
