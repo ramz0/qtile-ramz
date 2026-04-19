@@ -54,6 +54,20 @@ Esta configuración sigue un flujo modular para agregar widgets a la barra. El p
 | **Blocks** | `bar/widgets/blocks.py` | Espaciadores y separadores | Para espacio entre widgets |
 | **Custom** | `bar/widgets/customs.py` | Widgets personalizados | Para widgets con modificaciones o extensiones |
 
+<img src="docs/images/widgets-structure.png" width="600" alt="Estructura de directorios">
+
+*Estructura de archivos: basics.py, blocks.py, customs.py y extensions/*
+
+### Widgets Personalizados (Extensions)
+
+Algunos widgets en `customs.py` usan extensiones personalizadas en `bar/widgets/extensions/`:
+
+- `BatteryIcon` - Icono de batería con iconos dinámicos
+- `MinimalistWindowName` - Nombre de janela minimalista
+- `GroupBox` - Grupo de workspaces personalizado
+
+Estos se importan y se usan igual que los widgets normales.
+
 ### Paso 1: Elegir widget de la documentación
 
 - [Qtile Widgets](https://docs.qtile.org/en/stable/manual/ref/widgets.html) - Widgets oficiales
@@ -143,21 +157,42 @@ bar_widgets = [
 ]
 ```
 
-### Ejemplo Completo: Agregar un widget de temperatura
+### Ejemplo Completo: Agregar widget de Battery
 
-1. **Buscar en docs**: [Qtile Extras ThermalSensor](https://qtile-extras.readthedocs.io/)
+Tomemos como ejemplo el widget **Battery** de la documentación oficial de Qtile:
 
-2. **Agregar a basics.py**:
+1. **Buscar en docs**: [Qtile Battery Widget](https://docs.qtile.org/en/stable/manual/ref/widgets.html#libqtile.widget.Battery)
+
+Parámetros principales del widget:
 ```python
-"temperature": [
+widget.Battery(
+    background="color",      # Color de fondo
+    foreground="color",      # Color del texto
+    battery=0,               # Número de batería (0, 1, etc.)
+    charge_char='^',        # Carácter cargando
+    discharge_char='V',     # Carácter descargando
+    empty_char='x',         # Carácter vacío
+    full_char='=',          # Carácter lleno
+    format='{char} {percent:2.0%}',  # Formato de texto
+    update_interval=60,     # Segundos entre actualizaciones
+)
+```
+
+2. **Agregar a basics.py** (versión básica):
+```python
+"battery": [
     widget.TextBox(
-        text="🌡️",
+        text="󰁹",  # Icono batería
         fontsize=14,
-        background=colorCPU,
+        background=colorBateria,
         **decor_left_edge,
     ),
-    widget.ThermalSensor(
-        background=colorCPU,
+    widget.Battery(
+        charge_char='󰂄',
+        discharge_char="",
+        format="{percent:2.0%}  {char}",
+        padding=8,
+        background=colorBateria,
         foreground=colorBarra,
         **decor_right_edge,
     ),
@@ -166,10 +201,35 @@ bar_widgets = [
 
 3. **Agregar a bar.py**:
 ```python
-widgets["temperature"],
+*widgets["battery"],  # El asterisco es porque es una lista
 ```
 
 4. **Reiniciar Qtile**: `Mod + Ctrl + r`
+
+---
+
+### Personalizar un Widget (Custom/Extensions)
+
+Si necesitas modificar el comportamiento de un widget, puedes crear una extensión:
+
+```python
+# bar/widgets/extensions/mi_widget.py
+from libqtile.widget import Battery as _Battery
+
+class MiBattery(_Battery):
+    def __init__(self, **config):
+        super().__init__(**config)
+        # Personalizar lógica aquí
+```
+
+Luego lo importas en `customs.py`:
+```python
+from bar.widgets.extensions.mi_widget import MiBattery
+
+widgets = {
+    "mi_battery": MiBattery(...),
+}
+```
 
 ## La Tecla Mod
 
