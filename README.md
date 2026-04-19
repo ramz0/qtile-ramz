@@ -54,7 +54,7 @@ Esta configuración sigue un flujo modular para agregar widgets a la barra. El p
 | **Blocks** | `bar/widgets/blocks.py` | Espaciadores y separadores | Para espacio entre widgets |
 | **Custom** | `bar/widgets/customs.py` | Widgets personalizados | Para widgets con modificaciones o extensiones |
 
-<img src="docs/images/estructuraDirectorios.png" width="600" alt="Estructura de directorios">
+<img src="docs/images/estructuraDirectorios.png" width="350" alt="Estructura de directorios">
 
 *Estructura de archivos: basics.py, blocks.py, customs.py y extensions/*
 
@@ -178,35 +178,65 @@ widget.Battery(
 )
 ```
 
-2. **Agregar a basics.py** (versión básica):
+2. **Agregar en customs.py** (versión con extensión personalizada):
+
 ```python
-"battery": [
-    widget.TextBox(
-        text="󰁹",  # Icono batería
-        fontsize=14,
-        background=colorBateria,
-        **decor_left_edge,
+from libqtile import widget
+from qtile_extras import widget
+from libqtile.lazy import lazy
+
+from bar.widgets.extensions.battery import BatteryIcon
+
+# Decoraciones
+from theme.colors import *
+from theme.decorations import *
+
+widgets = {
+  "battery": [
+    BatteryIcon(
+      update_interval=30,
+      format="{icon}",
+      fontsize=13,
+      padding=6,
+      background=colorBateria,
+      foreground=colorBarra,
+      **decor_left_edge,
     ),
     widget.Battery(
-        charge_char='󰂄',
-        discharge_char="",
-        format="{percent:2.0%}  {char}",
-        padding=8,
-        background=colorBateria,
-        foreground=colorBarra,
-        **decor_right_edge,
+      charge_char = '',
+      discharge_char="",
+      update_interval=30,
+      format="{percent:2.0%}  {char}",
+      padding=8,
+      background=colorBateria,
+      foreground=colorBarra,
+      **decor_right_edge,
     ),
-],
+  ]
+}
 ```
 
-3. **Agregar a bar.py**:
+3. **Agregar a bar/bar.py**:
+
 ```python
-*widgets["battery"],  # El asterisco es porque es una lista
+bar_widgets = [
+    widgets["launcher"],
+    widgets["big_spacer"],
+    *widgets["groupbox"],
+    # ...
+    *widgets["battery"],  # ← El asterisco * es obligatorio porque es una lista de múltiples widgets
+    widgets["small_spacer"],
+    *widgets["clock"]
+]
 ```
+
+**¿Por qué el asterisco `*`?**
+- `*widgets["battery"]` = Es una **lista** de múltiples widgets (icono + texto)
+- `widgets["launcher"]` = Es un **widget único** (sin asterisco)
 
 4. **Reiniciar Qtile**: `Mod + Ctrl + r`
 
-<img src="docs/images/widget-battery.png" width="400" alt="Widget Battery en la barra">
+<img src="docs/images/widget-battery.png" width="250" alt="Widget Battery en la barra">
 
 *Resultado: Widget de batería con icono personalizado, colores y decoraciones redondeadas*
 
