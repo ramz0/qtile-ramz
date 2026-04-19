@@ -54,7 +54,7 @@ Esta configuración sigue un flujo modular para agregar widgets a la barra. El p
 | **Blocks** | `bar/widgets/blocks.py` | Espaciadores y separadores | Para espacio entre widgets |
 | **Custom** | `bar/widgets/customs.py` | Widgets personalizados | Para widgets con modificaciones o extensiones |
 
-<img src="docs/images/widgets-structure.png" width="600" alt="Estructura de directorios">
+<img src="docs/images/estructuraDirectorios.png" width="600" alt="Estructura de directorios">
 
 *Estructura de archivos: basics.py, blocks.py, customs.py y extensions/*
 
@@ -205,6 +205,10 @@ widget.Battery(
 ```
 
 4. **Reiniciar Qtile**: `Mod + Ctrl + r`
+
+<img src="docs/images/widget-battery.png" width="400" alt="Widget Battery en la barra">
+
+*Resultado: Widget de batería con icono personalizado, colores y decoraciones redondeadas*
 
 ---
 
