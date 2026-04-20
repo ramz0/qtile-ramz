@@ -389,14 +389,18 @@ Soporta workspaces pareados para múltiples monitores (ej: 1 y 1b, 2 y 2b, etc.)
 
 La paleta se carga desde un archivo JSON en `theme/colors/`. Esto permite cambiar completamente el aspecto visual sin modificar código Python.
 
-### Paletas disponibles
+<details>
+<summary><b>Paletas disponibles</b></summary>
 
 - `tokyo-night-moon.json` - Oscuro con tonos lavados pasteles
 - `tokyo-night-storm.json` - Oscuro clásico (por defecto)
 - `tokyo-night-night.json` - Oscuro profundo
 - `tokyo-night-day.json` - Versión clara
 
-### Cómo cambiar de paleta
+</details>
+
+<details>
+<summary><b>Cómo cambiar de paleta</b></summary>
 
 Edita `theme/colors.py` y cambia la variable:
 
@@ -404,7 +408,10 @@ Edita `theme/colors.py` y cambia la variable:
 PALETTE_FILE = "tokyo-night-storm.json"  # Cambia aquí
 ```
 
-### Cómo crear tu propia paleta
+</details>
+
+<details>
+<summary><b>Cómo crear tu propia paleta</b></summary>
 
 Crea un archivo JSON en `theme/colors/` con el siguiente formato:
 
@@ -446,13 +453,18 @@ Crea un archivo JSON en `theme/colors/` con el siguiente formato:
 
 Luego importa este archivo en `theme/colors.py` cambiando `PALETTE_FILE`.
 
-### Dónde descargar más paletas
+</details>
+
+<details>
+<summary><b>Dónde descargar más paletas</b></summary>
 
 - [tokyo-night.nvim](https://github.com/folke/tokyo-night.nvim) - Repo oficial de Tokyo Night
 - [catppuccin](https://github.com/catppuccin/catppuccin) - Temas para muchas apps
 - [dracula](https://github.com/dracula/dracula-theme) - Tema clásico oscuro
 - [nord](https://github.com/nordtheme/nord) - Tema ártico, norte
 - [github themes](https://github.com/topics/color-scheme) - Busca "color scheme json"
+
+</details>
 
 ## Requisitos
 
