@@ -575,21 +575,37 @@ Mod + Ctrl + r
 
 ## Solución de problemas
 
-### La barra no aparece
+<details>
+<summary><b>La barra no aparece</b></summary>
+
 - Verifica que `qtile-extras` esté instalado: `python -c "import qtile_extras"`
 - Revisa los logs: `qtile msg -o debug`
 
-### Los atajos de volumen no funcionan
+</details>
+
+<details>
+<summary><b>Los atajos de volumen no funcionan</b></summary>
+
 - Verifica pamixer: `pamixer --get-volume`
 - Revisa el script: `~/.config/rofi/bin/volume-bar`
 
-### Rofi no muestra iconos
+</details>
+
+<details>
+<summary><b>Rofi no muestra iconos</b></summary>
+
 - Instala Papirus: `sudo pacman -S papirus-icon-theme`
 - Usa: `rofi -show drun -icon-theme "Papirus" -show-icons`
 
-### Fuentes con símbolos faltantes
+</details>
+
+<details>
+<summary><b>Fuentes con símbolos faltantes</b></summary>
+
 - Instala Nerd Fonts: `yay -S ttf-jetbrains-mono-nerd`
 - Configura en tu terminal: `font: JetBrainsMonoNerd Font:size=11`
+
+</details>
 
 ## Recursos adicionales
 
