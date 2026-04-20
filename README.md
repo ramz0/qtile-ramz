@@ -287,7 +287,7 @@ La tecla **Windows** de tu teclado (también llamada **Super** en Linux/Mac).
 
 ## Catálogo de Atajos
 
-### �_general - Navegación y Control
+### 🧭_general - Navegación y Control
 
 | Atajo | Acción |
 |-------|--------|
