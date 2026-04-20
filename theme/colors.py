@@ -38,4 +38,4 @@ colorBarraGrupos = colores["crust"]
 colorDelGrupoActivo = colorMoradoIntenso
 colorDeGruposActivos = listaDeColoresGrupos
 colorDelGrupoActual = colores["yellow"]
-colorCPU = colores["red"]
+colorCPU = colores["blue"]
