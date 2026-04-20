@@ -287,7 +287,8 @@ La tecla **Windows** de tu teclado (también llamada **Super** en Linux/Mac).
 
 ## Catálogo de Atajos
 
-### 🧭_general - Navegación y Control
+<details>
+<summary><b>🧭 General - Navegación y Control</b></summary>
 
 | Atajo | Acción |
 |-------|--------|
@@ -307,7 +308,10 @@ La tecla **Windows** de tu teclado (también llamada **Super** en Linux/Mac).
 | `Mod + Shift + ←/→/↑/↓` | Mover ventana |
 | `Mod + Ctrl + ←/→/↑/↓` | Redimensionar ventana |
 
-### Grupos de Trabajo
+</details>
+
+<details>
+<summary><b>Grupos de Trabajo</b></summary>
 
 | Atajo | Acción |
 |-------|--------|
@@ -316,7 +320,10 @@ La tecla **Windows** de tu teclado (también llamada **Super** en Linux/Mac).
 
 Soporta workspaces pareados para múltiples monitores (ej: 1 y 1b, 2 y 2b, etc.). Al presionar nuevamente se vuelve al grupo anterior.
 
-### 🖥️ Monitores
+</details>
+
+<details>
+<summary><b>🖥️ Monitores</b></summary>
 
 | Atajo | Acción |
 |-------|--------|
@@ -324,7 +331,10 @@ Soporta workspaces pareados para múltiples monitores (ej: 1 y 1b, 2 y 2b, etc.)
 | `Mod + b` | Mostrar/ocultar barra de laptop |
 | `Mod + Shift + b` | Mostrar/ocultar barra del monitor |
 
-### 📱 multimedia (Volumen y Brillo)
+</details>
+
+<details>
+<summary><b>📱 Multimedia (Volumen y Brillo)</b></summary>
 
 ##### Volumen
 | Atajo | Acción |
@@ -346,7 +356,10 @@ Soporta workspaces pareados para múltiples monitores (ej: 1 y 1b, 2 y 2b, etc.)
 | `XF86AudioNext` | Siguiente pista |
 | `XF86AudioPrev` | Pista anterior |
 
-### 🚀 Aplicaciones
+</details>
+
+<details>
+<summary><b>🚀 Aplicaciones</b></summary>
 
 | Atajo | Acción |
 |-------|--------|
@@ -359,13 +372,18 @@ Soporta workspaces pareados para múltiples monitores (ej: 1 y 1b, 2 y 2b, etc.)
 | `Mod + Ctrl + Shift + s` | Captura de pantalla |
 | `Mod + c` | Visual Studio Code |
 
-### 🖱️ Ratón
+</details>
+
+<details>
+<summary><b>🖱️ Ratón</b></summary>
 
 | Atajo | Acción |
 |-------|--------|
 | `Mod + Click 1` | Arrastrar ventana (posición) |
 | `Mod + Click 3` | Arrastrar ventana (tamaño) |
 | `Mod + Click 2` | Traer ventana al frente |
+
+</details>
 
 ## Paleta de Colores
 
