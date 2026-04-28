@@ -50,6 +50,16 @@ def auto_monitor(event):
     qtile.reconfigure_screens()
 
 
+@hook.subscribe.startup_once
+def startup_launch_compositor():
+    """Lanza picom al iniciar Qtile si no está corriendo."""
+    if qtile is None:
+        return
+    # Lanzar picom si no está corriendo
+    if not subprocess.run(["pgrep", "-x", "picom"], capture_output=True).returncode == 0:
+        subprocess.Popen(["picom", "--daemon"])
+
+
 @hook.subscribe.startup
 def set_initial_groups():
     """Configura los grupos iniciales al iniciar Qtile."""

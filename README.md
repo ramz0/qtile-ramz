@@ -477,7 +477,7 @@ Luego importa este archivo en `theme/colors.py` cambiando `PALETTE_FILE`.
 | `python-xkbgroup` | Soporte para teclas avanzadas | `python-xkbgroup` | - |
 | `qtile-extras` | Widgets y funciones adicionales | `python-qtile-extras` | `qtile-extras-git` |
 | `rofi` | Menú de aplicaciones | `rofi` | `rofi-power-menu` |
-| `picom` | Compositor (transparencias) | `picom` | `picom-git` |
+| `picom` | Compositor (esquinas redondas, sombras, blur) ** imprescindible ** | `picom` | `picom-git` |
 
 ### Herramientas multimedia (volumen, brillo, reproductor)
 
@@ -531,6 +531,29 @@ cp -r qtile/ ~/.config/
 ```
 
 ### 3. Configuración adicional
+
+#### Picom (Compositor)
+
+Picom es **esencial** para las esquinas redondas, sombras y blur de la barra de Qtile. Qtile dibuja la barra como un rectángulo plano, por lo que necesitas un compositor como picom para estos efectos.
+
+**Archivo de configuración incluido:**
+
+Copia el archivo de configuración de picom al directorio correspondiente:
+
+```bash
+mkdir -p ~/.config/picom
+cp extras/picom.conf ~/.config/picom/picom.conf
+```
+
+**Configuración incluida:**
+- Sombras con radio 15 y opacidad 0.30
+- Esquinas redondas (corner-radius: 13)
+- Blur método dual_kawase
+- Excepciones para la barra de Qtile (`QTILE_BAR`)
+
+**Autostart automático:**
+
+Qtile lanzará picom automáticamente al inicio si no está corriendo (configurado en `hooks.py`).
 
 #### Rofi Scripts
 
